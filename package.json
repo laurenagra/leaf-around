@@ -16,6 +16,8 @@
     "concurrently": "^5.1.0"
   },
   "dependencies": {
+    "ansi-regex": "^6.0.1",
+    "ansi-styles": "^6.1.0",
     "apollo": "^2.34.0"
   }
 }
