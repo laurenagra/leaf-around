@@ -1,39 +1,39 @@
 const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
-type Book {
+  type Book {
     _id: ID
     authors: [String]
     description: String
-    bookId: String 
+    bookId: String
     image: String
     link: String
     title: String
-}
-
-type User {
-    _id: ID 
+  }
+  type User {
+    _id: ID
     username: String
     email: String
     password: String
     savedBooks: [Book]!
-}
-
-type Auth {
+  }
+  type Auth {
     token: ID!
     user: User
-}
-
-type Query {
+  }
+  type Query {
     user(userId: ID!): User
     users: [User]
-}
-
-type Mutation {
-    login(email: String!, email: String!, password: String!): Auth
+  }
+  type Mutation {
+    login(email: String!, password: String!): Auth
+    addUser(username: String!, email: String!, password: String!): Auth
     saveBook(userId: ID!, authors: [String], description: String, bookId: String, image: String, link: String, title: String): User
     removeBook(userId: ID!, bookId: ID!): User
-}
+  }
 `;
 
-module.exports= typeDefs;
+// saveBook Look into creating what's known as an input type to handle all of these parameters!
+// deleteBook Mutation needs to remove a specific book from a specific User's book list 
+
+module.exports = typeDefs;

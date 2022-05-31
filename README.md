@@ -40,7 +40,7 @@ To install the dependencies necessary to run use the application, the user shoul
 `Dependencies must be installed in order for application to function`
 - Explore the app locally, and in the terminal type: `npm run develop` 
 
-Deployed at: [this location]()
+Deployed at: [this location](https://leaf-around.herokuapp.com/)
 Repo: [here](https://github.com/laurenagra/leaf-around)
 
 ## User Story
